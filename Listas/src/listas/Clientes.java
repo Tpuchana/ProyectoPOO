@@ -56,15 +56,16 @@ public class Clientes {
     public String getCiudad() {
         return ciudad;
     }
-    public void datosCliente(){
-        String Texto = """
-                       Datos cliente: 
-                       \n Nombre: """ + this.nombre + "\n Cedula: " + this.cedula
-                       + "\n Telefono: "  + this.telefono
-                       + "\n Correo: " + this.correo
-                       + "\n Direccion: " + this.direccion
-                       + "\n Ciudad: " + this.ciudad;
+    public void datosProducto(){
+    String Texto = "Datos cliente: \n Nombre: " + this.nombreProducto
+    + "\n Referencia: "  + this.referencia
+    + "\n Medidas: " + this.medidasProducto
+    + "\n Categoria: " + this.categoriaProducto;
+                       
+                       ;
         JOptionPane.showMessageDialog(null, Texto);
                 
 }
+
+
 }

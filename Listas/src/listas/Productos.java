@@ -41,3 +41,7 @@ public class Productos {
                       
         JOptionPane.showMessageDialog(null, Texto);
 }
+public String toString() {
+    return "Productos{" + "referencia=" + referencia + ", nombreProducto=" + nombreProducto + ", medidasProducto=" + medidasProducto + ", categoriaProducto=" + categoriaProducto + '}';
+}
+}

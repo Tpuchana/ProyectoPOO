@@ -15,7 +15,32 @@ public class Listas {
     public static void main(String[] args) {
          ArrayList<Clientes> ListaClientes = new ArrayList<>();
         ListaClientes.add(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
-       boolean continuar = true;
+        ArrayList<Administradores> ListaAdmin = new ArrayList<>();
+        ListaAdmin.add(new Administradores("Esteban", "Esteban@.com","101356"));
+        ListaAdmin.add(new Administradores("Juan", "Juan@.com","21p"));
+        ListaAdmin.add(new Administradores("Tomas", "Tomas@.com","50palos"));
+        ArrayList<Productos> ListaProductos  = new ArrayList<>();
+        ListaProductos.add(new Productos(001,"PinACDC","4x5","Neon"));
+
+
+
+
+
+
+
+
+        int cho = Integer.parseInt(JOptionPane.showInputDialog("Ingrese opcion: \n 1.Cliente \n 2.Administrador"));
+        
+        if(cho == 2){
+        String InputCorreo = JOptionPane.showInputDialog("Ingrese el correo");
+        String InputClave = JOptionPane.showInputDialog("Ingrese la clave");
+        boolean ingreso = false;
+        for(int i=0; i < ListaAdmin.size(); i ++){
+            if(InputCorreo.equals(ListaAdmin.get(i).getCorreo())){
+                if(InputClave.equals(ListaAdmin.get(i).getClave())){
+                    JOptionPane.showMessageDialog(null, "Bienvenido, Ingreso Correcto");
+                    ingreso = true;
+                    boolean continuar = true;
        int opcion;
        int index;
        while(continuar){
@@ -44,7 +69,7 @@ public class Listas {
                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
                    }
                    else{
-                   JOptionPane.showMessageDialog(null, ListaClientes);
+                   JOptionPane.showMessageDialog(null, ListaClientes.toString());
                    break;
                    }
                case 3:
@@ -89,11 +114,11 @@ public class Listas {
                    break;
                default:
                    JOptionPane.showMessageDialog(null, "Opcio NO valida");
+                   break;
            }
        }
-        ArrayList<Productos> ListaProductos  = new ArrayList<>();
-        ListaProductos.add(new Productos(001,"PinACDC","4x5","Neon"));
-        boolean continuar1 = true;
+        
+       boolean continuar1 = true;
        int opcion1;
        int index1;
        while(continuar1){
@@ -118,7 +143,7 @@ public class Listas {
                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
                    }
                    else{
-                   JOptionPane.showMessageDialog(null, ListaProductos);
+                   JOptionPane.showMessageDialog(null, ListaProductos.toString());
                    break;
                    }
                case 3:
@@ -163,8 +188,61 @@ public class Listas {
                    break;
                default:
                    JOptionPane.showMessageDialog(null, "Opcio NO valida");
+                   break;
            }
-       }
+}
+
+    }else{
+        JOptionPane.showMessageDialog(null, "Clave Erronea");
+        ingreso = true;
+        break;
     }
+                }
+                
+                if(ingreso == false){
+                    JOptionPane.showMessageDialog(null, "Usuario de Administrador No encontrado");
+                    
+                }
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Opcion No valida");
+        }
+    
+    if(cho == 1){
+        String InputCorreo1 = JOptionPane.showInputDialog("Ingrese el correo");
+        String InputClave1 = JOptionPane.showInputDialog("Ingrese la clave");
+        boolean ingresar = false;
+        for(int i=0; i < ListaClientes.size(); i ++){
+            if(InputCorreo1.equals(ListaClientes.get(i).getCorreo())){
+                if(InputClave1.equals(ListaClientes.get(i).getContraseña())){
+                    JOptionPane.showMessageDialog(null, "Bienvenido, Ingreso Correcto");
+                    ingresar = true;
+                    if(ListaProductos.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+                    }
+                    else{
+                    JOptionPane.showMessageDialog(null, ListaProductos);
+                    
+        }
+        }else{
+                    JOptionPane.showMessageDialog(null, "Clave Erronea");
+                    ingresar = true;
+                    break;
+                }
+                
+            }
+            if(ingresar == false){
+                JOptionPane.showMessageDialog(null, "Usuario No encontrado");
+            }
+      
+}
+        
+}
+else{
+    JOptionPane.showMessageDialog(null, "Opcion No valida");
     
 }
+}
+} 
+
