@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package listas;
 
 import java.util.ArrayList;
@@ -13,18 +9,14 @@ public class Listas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         ArrayList<Clientes> ListaClientes = new ArrayList<>();
-        ListaClientes.add(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
+        Clientes ListaClientes = new Clientes ("Clientes SKRPINS");
+        ListaClientes.agregarCliente(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
         ArrayList<Administradores> ListaAdmin = new ArrayList<>();
         ListaAdmin.add(new Administradores("Esteban", "Esteban@.com","101356"));
         ListaAdmin.add(new Administradores("Juan", "Juan@.com","21p"));
         ListaAdmin.add(new Administradores("Tomas", "Tomas@.com","50palos"));
         ArrayList<Productos> ListaProductos  = new ArrayList<>();
         ListaProductos.add(new Productos(001,"PinACDC","4x5","Neon"));
-
-
-
-
 
 
 
@@ -43,6 +35,8 @@ public class Listas {
                     boolean continuar = true;
        int opcion;
        int index;
+       
+       
        while(continuar){
            opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido. "
                    + "\n Ingresa una opcion "
@@ -73,30 +67,8 @@ public class Listas {
                    break;
                    }
                case 3:
-//          if(ListaClientes.contains(123456)){
-//              System.out.println("SIISI");
-//            }
-//        }
-//
-//        // Mostrar el resultado de la búsqueda
-//        if (objetoEncontrado != null) {
-//            System.out.println("Objeto encontrado: " + objetoEncontrado.getAtributo());
-//        } else {
-//            System.out.println("No se encontró ningún objeto con el valor proporcionado.");
-//        }
-    
-
-                        
-                   
-//                   index = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero del cliente"));
-//                   index --;
-//                   //Usar metodo listaClientes.get(index)
-//                   if(index < ListaClientes.size() && index >= 0){
-//                   ListaClientes.get(index).datosCliente();
-//                   }
-//                   else{
-//                       JOptionPane.showMessageDialog(null, "Indice No valido");
-//                   }
+                   int id = Integer.parseInt(JOptionPane.showInputDialog("Ingresar identificación del cliente: "));
+                   JOptionPane.showMessageDialog(null, i);
                    break;
                case 4:
                    index = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero del cliente que desea eliminar"));
@@ -126,7 +98,7 @@ public class Listas {
                    + "\n Ingresa una opcion "
                    + "\n 1.Agregar Producto "
                    + "\n 2.Mostrar Lista Productos "
-                   + "\n 3.Buscar Producto "
+                   + "\n 3.Buscar Producto por referencia "
                    + "\n 4.Eliminar Producto "
                    + "\n 5.Salir "));
            switch (opcion1){
@@ -147,30 +119,7 @@ public class Listas {
                    break;
                    }
                case 3:
-//          if(ListaClientes.contains(123456)){
-//              System.out.println("SIISI");
-//            }
-//        }
-//
-//        // Mostrar el resultado de la búsqueda
-//        if (objetoEncontrado != null) {
-//            System.out.println("Objeto encontrado: " + objetoEncontrado.getAtributo());
-//        } else {
-//            System.out.println("No se encontró ningún objeto con el valor proporcionado.");
-//        }
-    
-
-                        
                    
-//                   index = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero del cliente"));
-//                   index --;
-//                   //Usar metodo listaClientes.get(index)
-//                   if(index < ListaClientes.size() && index >= 0){
-//                   ListaClientes.get(index).datosCliente();
-//                   }
-//                   else{
-//                       JOptionPane.showMessageDialog(null, "Indice No valido");
-//                   }
                    break;
                case 4:
                    index1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero del producto que eliminará"));
