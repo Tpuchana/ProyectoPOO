@@ -32,9 +32,12 @@ public class Clientes {
     }
 
     Clientes(String clientes_SKRPINS) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
+    
+    
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -67,6 +70,7 @@ public class Clientes {
         return ciudad;
     }
     
+
     public void agregarCliente(Clientes clienteNuevo){
         this.listaClientes.add(clienteNuevo);
         numeroClientes++;
@@ -80,6 +84,15 @@ public class Clientes {
         
     }
     
+    public String mostrarClientes (){
+        String texto = "";
+        
+        for (Clientes i: this.listaClientes){
+            texto += i.toString();
+        }
+        return texto;
+    }
+    
     public Clientes encontrarCliente (int index){
         if (index>=0 && index < this.listaClientes.size()){
             return this.listaClientes.get(index);
@@ -89,7 +102,7 @@ public class Clientes {
         return null;
     }
     
-    public void datosProducto(){
+    public void datosCliente(){
     String Texto = "Datos cliente: \n Nombre: " + this.nombre
     + "\n Apellido: "  + this.apellido
     + "\n Cedula: " + this.cedula
@@ -102,28 +115,13 @@ public class Clientes {
                        
                        
         JOptionPane.showMessageDialog(null, Texto);
-                
+    }
 }
-
-    int size() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void remove(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    Object get(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void add(Clientes clientes) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+               
+                       
+     
 
 
-}
+
+
+
