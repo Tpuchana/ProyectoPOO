@@ -9,8 +9,8 @@ public class Listas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Clientes ListaClientes = new Clientes ("Clientes SKRPINS");
-        ListaClientes.agregarCliente(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
+        ArrayList<Clientes> ListaClientes = new ArrayList<>();
+        ListaClientes.add(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
         ArrayList<Administradores> ListaAdmin = new ArrayList<>();
         ListaAdmin.add(new Administradores("Esteban", "Esteban@.com","101356"));
         ListaAdmin.add(new Administradores("Juan", "Juan@.com","21p"));
@@ -59,13 +59,8 @@ public class Listas {
                    JOptionPane.showMessageDialog(null, "El cliente se registró exitosamente");
                    break;
                case 2:
-                   if(ListaClientes.isEmpty()){
-                       JOptionPane.showMessageDialog(null, "La lista esta vacia");
-                   }
-                   else{
                    JOptionPane.showMessageDialog(null, ListaClientes.toString());
                    break;
-                   }
                case 3:
                    int id = Integer.parseInt(JOptionPane.showInputDialog("Ingresar identificación del cliente: "));
                    JOptionPane.showMessageDialog(null, i);
@@ -136,7 +131,7 @@ public class Listas {
                    continuar1=false;
                    break;
                default:
-                   JOptionPane.showMessageDialog(null, "Opcio NO valida");
+                   JOptionPane.showMessageDialog(null, "Opción NO valida");
                    break;
            }
 }
@@ -154,9 +149,6 @@ public class Listas {
                 }
             }
         }
-        else{
-            JOptionPane.showMessageDialog(null, "Opcion No valida");
-        }
     
     if(cho == 1){
         String InputCorreo1 = JOptionPane.showInputDialog("Ingrese el correo");
@@ -164,7 +156,7 @@ public class Listas {
         boolean ingresar = false;
         for(int i=0; i < ListaClientes.size(); i ++){
             if(InputCorreo1.equals(ListaClientes.get(i).getCorreo())){
-                if(InputClave1.equals(ListaClientes.get(i).getContraseña())){
+                if(InputClave1.equals(ListaClientes.get(i).getContrasena())){
                     JOptionPane.showMessageDialog(null, "Bienvenido, Ingreso Correcto");
                     ingresar = true;
                     if(ListaProductos.isEmpty()){
