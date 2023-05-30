@@ -25,6 +25,8 @@ public class Administradores {
         return clave;
     }
 
+   
+    @Override
     public String toString() {
         return "Administradores{" + "Nombre=" + Nombre + ", correo=" + correo + ", clave=" + clave + '}';
     }

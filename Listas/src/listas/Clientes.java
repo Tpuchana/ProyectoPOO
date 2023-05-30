@@ -24,7 +24,10 @@ public class Clientes {
         this.direccion = direccion;
         this.ciudad = ciudad;
     }
+    
+    
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -56,16 +59,11 @@ public class Clientes {
     public String getCiudad() {
         return ciudad;
     }
-    public void datosProducto(){
-    String Texto = "Datos cliente: \n Nombre: " + this.nombreProducto
-    + "\n Referencia: "  + this.referencia
-    + "\n Medidas: " + this.medidasProducto
-    + "\n Categoria: " + this.categoriaProducto;
+    
                        
-                       ;
-        JOptionPane.showMessageDialog(null, Texto);
+                       
+     
                 
 }
 
 
-}
