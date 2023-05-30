@@ -11,10 +11,10 @@ public class Listas {
     public static void main(String[] args) {
         ArrayList<Clientes> ListaClientes = new ArrayList<>();
         ListaClientes.add(new Clientes("Andres", "Lopez", 123456, 305968745, "8456l","hola@.com","calle65","Bogota"));
-        ArrayList<Administradores> ListaAdmin = new ArrayList<>();
-        ListaAdmin.add(new Administradores("Esteban", "Esteban@.com","101356"));
-        ListaAdmin.add(new Administradores("Juan", "Juan@.com","21p"));
-        ListaAdmin.add(new Administradores("Tomas", "Tomas@.com","50palos"));
+        ArrayList<Trabajador> ListaAdmin = new ArrayList<>();
+        ListaAdmin.add(new Trabajador("Esteban", "Esteban@.com","101356"));
+        ListaAdmin.add(new Trabajador("Juan", "Juan@.com","21p"));
+        ListaAdmin.add(new Trabajador("Tomas", "Tomas@.com","50palos"));
         ArrayList<Productos> ListaProductos  = new ArrayList<>();
         ListaProductos.add(new Productos(001,"PinACDC","4x5","Neon"));
 
@@ -38,15 +38,16 @@ public class Listas {
        
        
        while(continuar){
-           opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido. "
-                   + "\n Ingresa una opcion "
-                   + "\n 1.Agregar Cliente "
-                   + "\n 2.Mostrar Lista Clientes "
-                   + "\n 3.Buscar Cliente por cedula "
-                   + "\n 4.Eliminar Cliente "
-                   + "\n 5.Salir "));
+           opcion = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                 Bienvenido. 
+                                                                  Ingresa una opcion 
+                                                                  1.Agregar Cliente 
+                                                                  2.Mostrar Lista Clientes 
+                                                                  3.Buscar Cliente por cedula 
+                                                                  4.Eliminar Cliente 
+                                                                  5.Salir """));
            switch (opcion){
-               case 1: 
+               case 1 ->    { 
                    String nombre = JOptionPane.showInputDialog("Ingrese nombre del cliente: ");
                    String apellido = JOptionPane.showInputDialog("Ingrese apellido del cliente: ");
                    long cedula = Long.parseLong(JOptionPane.showInputDialog("Ingrese numero de celdula del cliente: "));
@@ -57,31 +58,25 @@ public class Listas {
                    long telefono = Long.parseLong(JOptionPane.showInputDialog("Ingrese telefono del cliente: "));
                    ListaClientes.add(new Clientes(nombre, apellido, cedula, telefono, contraseña, correo, direccion, ciudad));
                    JOptionPane.showMessageDialog(null, "El cliente se registró exitosamente");
-                   break;
-               case 2:
-                   JOptionPane.showMessageDialog(null, ListaClientes.toString());
-                   break;
-               case 3:
+                            }
+               case 2 -> JOptionPane.showMessageDialog(null, ListaClientes.toString());
+               case 3 ->    {
                    int id = Integer.parseInt(JOptionPane.showInputDialog("Ingresar identificación del cliente: "));
-                   JOptionPane.showMessageDialog(null, i);
-                   break;
-               case 4:
+                   JOptionPane.showMessageDialog(null, ListaClientes.get(i).toString());
+                            }
+               case 4 ->    {
                    index = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero del cliente que desea eliminar"));
                    index --;
                    //Usar metodo listaClientes.get(index)
                    if(index < ListaClientes.size() && index >= 0){
-                   ListaClientes.remove(index);
+                       ListaClientes.remove(index);
                    }
                    else{
                        JOptionPane.showMessageDialog(null, "Indice No valido");}
-                   break;
+                            }
                
-               case 5: 
-                   continuar=false;
-                   break;
-               default:
-                   JOptionPane.showMessageDialog(null, "Opcio NO valida");
-                   break;
+               case 5 -> continuar=false;
+               default -> JOptionPane.showMessageDialog(null, "Opcio NO valida");
            }
        }
         
@@ -89,13 +84,14 @@ public class Listas {
        int opcion1;
        int index1;
        while(continuar1){
-           opcion1 = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido. "
-                   + "\n Ingresa una opcion "
-                   + "\n 1.Agregar Producto "
-                   + "\n 2.Mostrar Lista Productos "
-                   + "\n 3.Buscar Producto por referencia "
-                   + "\n 4.Eliminar Producto "
-                   + "\n 5.Salir "));
+           opcion1 = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                  Bienvenido. 
+                                                                   Ingresa una opcion 
+                                                                   1.Agregar Producto 
+                                                                   2.Mostrar Lista Productos 
+                                                                   3.Buscar Producto por referencia 
+                                                                   4.Eliminar Producto 
+                                                                   5.Salir """));
            switch (opcion1){
                case 1: 
                    int referencia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese referencia del producto: "));
@@ -186,4 +182,5 @@ else{
 }
 }
 } 
+
 

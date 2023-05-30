@@ -2,12 +2,12 @@ package listas;
 
 import javax.swing.JOptionPane;
 
-public class Administradores {
+public class Trabajador {
     String Nombre;
     String correo;
     String clave;
 
-    public Administradores(String Nombre, String correo, String clave) {
+    public Trabajador(String Nombre, String correo, String clave) {
         this.Nombre = Nombre;
         this.correo = correo;
         this.clave = clave;

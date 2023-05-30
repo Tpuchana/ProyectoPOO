@@ -116,6 +116,12 @@ public class Clientes {
                        
         JOptionPane.showMessageDialog(null, Texto);
     }
+
+    @Override
+    public String toString() {
+        return "Clientes{" + "listaClientes=" + listaClientes + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula + ", telefono=" + telefono + ", contrasena=" + contrasena + ", correo=" + correo + ", direccion=" + direccion + ", ciudad=" + ciudad + '}';
+    }
+    
 }
                
                        
